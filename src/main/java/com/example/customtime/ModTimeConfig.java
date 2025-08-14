@@ -11,7 +11,7 @@ public class ModTimeConfig {
     static{
         ModConfigSpec.Builder b = new ModConfigSpec.Builder();
         b.push("timescale");
-        DAY_SCALE = b.defineInRange("day_scale", 4.0D, 0.0D, 1000.0D);
+        DAY_SCALE = b.defineInRange("day_scale", 1.0D, 0.0D, 1000.0D); //the default Time Scale on a new world
         NIGHT_SCALE = b.defineInRange("night_scale", 1.0D, 0.0D, 1000.0D);
         OVERWORLD_ONLY = b.define("overworld_only", true);
         FORCE_FREEZE_GAMERULE = b.define("force_freeze_gamerule", true);

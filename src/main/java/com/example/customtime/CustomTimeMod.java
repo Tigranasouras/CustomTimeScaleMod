@@ -19,6 +19,7 @@ public class CustomTimeMod {
 
         //Register command handler for the RegisterCommandsEvent /customtime ...
         NeoForge.EVENT_BUS.register(TimeCommands.class);
+        NeoForge.EVENT_BUS.register(TimeScaler.class);
     }
 
 }

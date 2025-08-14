@@ -44,7 +44,7 @@ public class TimeCommands {
                                     ctx.getSource().sendSuccess(() -> Component.literal("force_freeze_gamerule=false"), true); return 1; }))))
                 .then(Commands.literal("save").executes(ctx -> {
                     ctx.getSource().sendSuccess(() -> Component.literal(
-                            "Config values updated. They will be written to customtime-server.toml on shutdown."), true);
+                            "Config values updated. They will be written to custom_time_settings.toml on shutdown."), true);
                     return 1;
                 }))
         );

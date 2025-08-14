@@ -34,8 +34,8 @@ public class TimeScaler {
         if (sl.getGameRules().getBoolean(net.minecraft.world.level.GameRules.RULE_DAYLIGHT)) return; // vanilla advancing
 
         long dayTime = sl.getDayTime();
-        long tod = Math.floorMod(dayTime, 2400L);
-        boolean isDay = tod <1200L;
+        long tod = Math.floorMod(dayTime, 24000L);
+        boolean isDay = tod <12000L;
 
         double scale = isDay ? ModTimeConfig.dayScale() : ModTimeConfig.nightScale();
         if(scale <= 0.0) return; //pause segment
