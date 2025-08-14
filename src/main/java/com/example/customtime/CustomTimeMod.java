@@ -6,6 +6,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
 
+@Mod(CustomTimeMod.MODID) //makes NeoForge load the mod class
 public class CustomTimeMod {
     public static final String MODID = "customtime";
 
@@ -16,7 +17,7 @@ public class CustomTimeMod {
         modContainer.registerConfig(ModConfig.Type.SERVER, ModTimeConfig.SPEC, "custom_time_settings.toml");
 
 
-        //Register command handler for /customtime ...
+        //Register command handler for the RegisterCommandsEvent /customtime ...
         NeoForge.EVENT_BUS.register(TimeCommands.class);
     }
 

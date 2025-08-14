@@ -13,6 +13,7 @@ import java.util.Map;
 public class TimeScaler {
     private static final Map<Level, Double> FRACTIONAL = new HashMap<>();
 
+    @SubscribeEvent
     public static void onLevelLoad(LevelEvent.Load evt){
         if (evt.getLevel() instanceof ServerLevel sl){
             FRACTIONAL.put(sl, 0.0);
@@ -21,11 +22,12 @@ public class TimeScaler {
             }
         }
     }
-
+    @SubscribeEvent
     public static void onLevelUnload(LevelEvent.Unload evt){
         if(evt.getLevel() instanceof ServerLevel sl) FRACTIONAL.remove(sl);
     }
 
+    @SubscribeEvent
     public static void onLevelTick(LevelTickEvent.Post evt){
         if(!(evt.getLevel() instanceof ServerLevel sl)) return;
         if (ModTimeConfig.overworldOnly() && sl.dimension() != Level.OVERWORLD) return;
