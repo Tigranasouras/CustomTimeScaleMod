@@ -1,7 +1,3 @@
-
-Scale day and night independently without changing tick speed.
-
-===================================================================================
 Custom Time Scale is a lightweight NeoForge mod for Minecraft 1.21.x that gives you full control over the length of day and night — independently — without messing with game tick speed.
 
 Unlike other time mods that slow the whole game, this one only changes the in-game clock, keeping crop growth, mob AI, and MineColonies colonists working normally.
