@@ -1,25 +1,28 @@
 
-Installation information
-=======
+Cloned a template repository to simplify the NeoForge Environment setup.
+===================================================================================
+Custom Time Scale is a lightweight NeoForge mod for Minecraft 1.21.x that gives you full control over the length of day and night — independently — without messing with game tick speed.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Unlike other time mods that slow the whole game, this one only changes the in-game clock, keeping crop growth, mob AI, and MineColonies colonists working normally.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+Commands:
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+        /customtime get
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+        /customtime set day <scale> (1.0 = normal, 4.0 = 4× slower, 0.5 = 2× faster)
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+        /customtime set night <scale>
+
+        /customtime overworld_only true|false
+
+        /customtime freeze_gamerule true|false
+
+         
+
+        Notes:
+
+            Per-world config lives at serverconfig/custom_time_settings.toml.
+
+            Ship defaults with defaultconfigs/custom_time_settings.toml.
+
+            If doDaylightCycle is true, vanilla time advance overrides scaling (toggle off or enable auto-freeze in config).
